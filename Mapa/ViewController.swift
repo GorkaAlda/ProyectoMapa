@@ -14,12 +14,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //inicializa el archivo de puntos
-        exNhilPointsFile()
-        print("AM being loaded")
-        print(POINTS_FILE)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destino = segue.destination as! ViewControllerMapa
+        if(segue.identifier == "mapaCaminar") {
+            destino.regionInMeters = 150
+        } else if(segue.identifier == "mapaCorrer") {
+            destino.regionInMeters = 300
+        } else if(segue.identifier == "mapaBici") {
+            destino.regionInMeters = 500
+        }
+    }
     
 }
 

@@ -16,7 +16,7 @@ class ViewControllerMapa: UIViewController {
     
     
     let locationManager:CLLocationManager = CLLocationManager()
-    let regionInMeters: Double = 500 //el zoom del mapa, cambiara con el modo de desplazamiento
+    var regionInMeters: Double = 500 //el zoom del mapa por defecto, cambiara con el modo de desplazamiento
     var lastLocation:CLLocation = CLLocation()
     var locationArray:[Point] = []
     

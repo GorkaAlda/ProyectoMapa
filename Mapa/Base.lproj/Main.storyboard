@@ -31,12 +31,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJf-OC-JzT">
-                                <rect key="frame" x="184" y="417" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaC-Kw-Fgt">
+                                <rect key="frame" x="185" y="754" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Correr"/>
                                 <connections>
-                                    <segue destination="3ge-E9-JNr" kind="show" id="TNS-1G-cZI"/>
+                                    <segue destination="3ge-E9-JNr" kind="show" identifier="mapaCorrer" id="j8a-MD-Cso"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYC-ZX-ouO">
+                                <rect key="frame" x="69" y="754" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Caminar"/>
+                                <connections>
+                                    <segue destination="3ge-E9-JNr" kind="show" identifier="mapaCaminar" id="T0g-GS-ujD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7h-sY-gYc">
+                                <rect key="frame" x="290" y="754" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Bicicleta"/>
+                                <connections>
+                                    <segue destination="3ge-E9-JNr" kind="show" identifier="mapaBici" id="PQb-xb-nNO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-678" y="130"/>
+            <point key="canvasLocation" x="-678.26086956521749" y="129.91071428571428"/>
         </scene>
         <!--View Controller Mapa-->
         <scene sceneID="GlX-Dx-zPq">
@@ -78,7 +94,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="gW5-Q7-Eh7"/>
                     <connections>
-                        <outlet property="endOfPath2" destination="gW5-Q7-Eh7" id="dkI-rc-pOA"/>
                         <outlet property="mapView" destination="Su2-0B-oSu" id="tfc-QQ-0hx"/>
                     </connections>
                 </viewController>
@@ -87,4 +102,7 @@
             <point key="canvasLocation" x="257.97101449275362" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="PQb-xb-nNO"/>
+    </inferredMetricsTieBreakers>
 </document>

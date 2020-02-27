@@ -45,7 +45,7 @@ func addPointsToFile(path : [Point]) {
         let fileHandle = try FileHandle(forWritingTo: POINTS_FILE)
         fileHandle.seekToEndOfFile()
         if !path.isEmpty {
-            fileHandle.write(getCurrentTimestamp().data(using: .utf8)!)
+            fileHandle.write("\(getCurrentTimestamp())=".data(using: .utf8)!)
             fileHandle.write(path[0].toString().data(using: .utf8)!)
             for i in stride(from: 1, to: (path.count - 1) , by: 1) {
                 fileHandle.write(("," + path[i].toString()).data(using: .utf8)!)
