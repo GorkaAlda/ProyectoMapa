@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         //inicializa el archivo de puntos
         exNhilPointsFile()
+        print(POINTS_FILE)
         return true
     }
 

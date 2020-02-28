@@ -26,7 +26,6 @@ class Point{
     }
 }
 
-
 /*
  Si el archivo de puntos no existe, lo crea.
  */
@@ -69,9 +68,15 @@ func getAllPaths() -> [String] {
     var paths:[String] = []
     do {
         let allStrings = try String(contentsOfFile: POINTS_FILE.path, encoding: .utf8)
-        paths = allStrings.components(separatedBy: .newlines)
+        paths = allStrings.components(separatedBy: "\n")
     } catch {
         print(error)
+    }
+    
+    for i in 0...(paths.count - 1){
+        if(paths[i].isEmpty){
+            paths.remove(at: i)
+        }
     }
     
     return paths
