@@ -7,7 +7,6 @@
 *.mode2v3
 *.perspectivev3
 *.xcuserstate
-Mapa.xcworkspace/
 xcuserdata/
 
 # Generated files
@@ -26,5 +25,3 @@ build/
 # CocoaPods
 Podfile.lock
 Pods
-
-
