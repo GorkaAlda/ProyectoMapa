@@ -49,7 +49,7 @@ func addPointsToFile(path : [Point]) {
             for i in stride(from: 1, to: (path.count - 1) , by: 1) {
                 fileHandle.write(("," + path[i].toString()).data(using: .utf8)!)
             }
-            fileHandle.write("\n".data(using: .utf8)!)
+            fileHandle.write("\n".data(using: .utf8)!)	
         }
         try fileHandle.close()
     } catch {
